@@ -1,0 +1,11 @@
+{
+  "name": "securekit",
+  "displayName": "SecureKit & Secure-App",
+  "version": "0.1.0",
+  "description": "Application-level encryption, blind indexes, tamper seals, Argon2id passwords, encrypted secrets vaults, static security scanner, and full secure-SDLC router skill.",
+  "suggestedPrompts": [
+    "Review this project's security, run securekit scan, and report blocking gaps",
+    "Encrypt sensitive database columns and move hardcoded secrets into a securekit vault",
+    "Design a threat model, authorization matrix, and security requirements for a new app"
+  ]
+}

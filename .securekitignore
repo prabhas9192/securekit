@@ -1,0 +1,9 @@
+# Intentional fixtures: the scanner's own rule definitions, its tests, the shared test vectors and their generators
+python/securekit/scan.py
+python/tests/test_scan.py
+python/tests/test_scan_web.py
+python/gen_vectors.py
+node/scripts/emit-vectors.js
+vectors/*
+skills/secure-app/benchmark/apps/vulnerable_app.py
+skills/secure-app/benchmark/score.py

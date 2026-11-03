@@ -1,0 +1,15 @@
+{
+  "name": "securekit",
+  "version": "0.1.0",
+  "description": "Thin, opinionated field encryption, blind indexes, record seals, request signing and Argon2id passwords. Built on node:crypto only.",
+  "main": "src/index.js",
+  "bin": { "securekit": "bin/securekit.js" },
+  "engines": { "node": ">=24.7.0" },
+  "scripts": {
+    "test": "node --test",
+    "emit-vectors": "node scripts/emit-vectors.js"
+  },
+  "license": "MIT",
+  "author": "prabhas9192",
+  "private": true
+}

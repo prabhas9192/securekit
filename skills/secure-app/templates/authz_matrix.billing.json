@@ -1,0 +1,23 @@
+{
+  "login": {"path": "/login", "user_field": "username", "pass_field": "password", "token_field": "token"},
+  "users": {
+    "alice": {"username": "REPLACE_alice", "password": "REPLACE_password"},
+    "bob": {"username": "REPLACE_bob", "password": "REPLACE_password"},
+    "admin": {"username": "admin", "password": "REPLACE_admin_password"}
+  },
+  "steps": [
+    {"name": "alice creates an invoice", "as": "alice", "method": "POST", "path": "/invoices",
+     "json": {"customer": "MatrixCorp private customer", "amount": 10}, "expect": [201], "save": {"alice_invoice": "id"}}
+  ],
+  "cases": [
+    {"name": "anonymous cannot read an invoice", "as": null, "method": "GET", "path": "/invoices/{alice_invoice}", "expect": [401]},
+    {"name": "anonymous cannot list users", "as": null, "method": "GET", "path": "/admin/users", "expect": [401]},
+    {"name": "owner can read her invoice", "as": "alice", "method": "GET", "path": "/invoices/{alice_invoice}", "expect": [200]},
+    {"name": "another user cannot read it (IDOR)", "as": "bob", "method": "GET", "path": "/invoices/{alice_invoice}", "expect": [403, 404], "must_not_contain": ["MatrixCorp"]},
+    {"name": "another user's search does not find it", "as": "bob", "method": "GET", "path": "/invoices?q=MatrixCorp", "expect": [200], "must_not_contain": ["MatrixCorp"]},
+    {"name": "admin can read any invoice", "as": "admin", "method": "GET", "path": "/invoices/{alice_invoice}", "expect": [200]},
+    {"name": "ordinary user cannot list users", "as": "alice", "method": "GET", "path": "/admin/users", "expect": [403]},
+    {"name": "admin can list users", "as": "admin", "method": "GET", "path": "/admin/users", "expect": [200]},
+    {"name": "wrong method is refused", "as": "alice", "method": "DELETE", "path": "/invoices/{alice_invoice}", "expect": [404, 405, 501]}
+  ]
+}
