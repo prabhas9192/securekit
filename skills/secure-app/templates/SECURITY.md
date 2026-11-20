@@ -22,4 +22,4 @@ Include: what you found, how to reproduce it, the affected version, and any impa
 
 ## Scope
 
-In scope: <the application, its API, official builds>. Out of scope: <third-party services, social engineering, denial of secvice by volume>.
+In scope: <the application, its API, official builds>. Out of scope: <third-party services, social engineering, denial of service by volume>.
