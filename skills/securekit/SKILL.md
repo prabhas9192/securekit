@@ -86,57 +86,118 @@ secure = SecureModels(Keyring.from_env())
 secure.register(User, encrypted=["email"], blind={"email_idx": "email"},
                 seal=SealSpec("row_seal", ["id", "role"]), assign_id=lambda: str(uuid.uuid4()))
 
-user = session.scalars(select(User).where(secure.blind_filter(User, "email", "a@x.comŠJJK›Û™J
-B˜‚”[\ÈH^Y\ˆ[™›Ü˜Ù\ÎˆYÈ^\İ™Y›Ü™HH›\Ú
-]]Ú[˜Ü™[Y[[È˜Z\ÙJKÙX[YÛÛ[[œÈ\™HÙ]^XÚ]H
-›ÈÛÛ[[‚™Y˜][ÊKZ[^Ø[››İ™XXÚ[ˆ[˜Ü\YÛÛ[[ˆ›İYÚÛÜ™HÜˆ[ÈÜ\˜][ÛœË[™Ù[Xİ
-\Ù\‹™[XZ[
-X
-HÛÛ[[‹›İ[‚™[]JH™]\›œÈÚ\\^ˆØY[™ÈH›İÈÚÜÙHÚ\\^Ø\È[İ™Y˜Z\Ù\È[˜[YÚÙ[˜ÈHÚ[™ÙYÙX[YÛÛ[[ˆ˜Z\Ù\È[\\™Y›İÑ\œ›Ü˜‚‚ˆÈÈÈËŒÈ\XØ][ÛˆÙXÜ™]È˜][‚˜˜\Ú™^ÜÑPÕT‘RÒUÒÑVT’S‘ÏH‰
-Ø]Ù^\š[™ËšœÛÛŠHˆÈœ›ÛHH]›Ü›HÙXÜ™]İÜ™H[ˆ›ÙXİ[Û‚™^ÜÑPÕT‘RÒUÕUSKİ˜\‹ÛX‹Ø\ÜÙXÜ™]Ë˜][šœÛÛ‚œ]Ûˆ[HÙXİ\™ZÚ]˜][[š]œš[ˆ	\È‰Õ’TWÒÑVHˆ]Ûˆ[HÙXİ\™ZÚ]˜][]^[Y[ËÜİš\WÚÙ^HÈ˜[YHÛˆİ[‹™]™\ˆ[ˆ\™İ[Y[œ]Ûˆ[HÙXİ\™ZÚ]˜][\İ˜‚˜]Û‚™œ›ÛHÙXİ\™ZÚ][\ÜÙ^\š[™Â™œ›ÛHÙXİ\™ZÚ]˜][[\Ü˜][˜][H˜][›Ü[ŠÜË™[š\›Û–È”ÑPÕT‘RÒUÕUS—KÙ^\š[™Ë™œ›ÛWÙ[Š
-KXİÜHœ^[Y[ËX\HŠBœİš\WÚÙ^HH˜][œØÛÜY
-œ^[Y[ËÈŠK™Ù]ÜİŠœ^[Y[ËÜİš\WÚÙ^HŠHÈHÛÛ\Û™[ÙY\ÈÛ›H]ÈİÛˆ™Yš^˜‚˜œÂ˜ÛÛœİÈÙ^\š[™Ë˜][HH™\]Z\™J	ÜÙXİ\™ZÚ]	ÊNÂ˜ÛÛœİ˜][H˜][›Ü[Š›ØÙ\ÜË™[‹”ÑPÕT‘RÒUÕUSÙ^\š[™Ë™œ›ÛQ[Š
-KÈXİÜˆ	Ü^[Y[ËX\IÈJNÂ˜ÛÛœİİš\RÙ^HH˜][œØÛÜY
-	Ü^[Y[ËÉÊK™Ù]İš[™Ê	Ü^[Y[ËÜİš\WÚÙ^IÊNÂ˜‚•™\œÚ[ÛœÈ\™HÙ\
-™]Ù\İLHY˜][
-K\İ›ŞX™[[İ™\ÈH™\œÚ[Ûˆ›ÜˆÛÛÙ]Y]ÚİÜÈÚÈYÚ]™\šYHKYY\›İ™\ÂHš[H[™]™\HÙXÜ™]\™H[Xİˆ›İ]HÙ^\ÈÚ]ÙXİ\™ZÚ]˜][›İ]KZÙ^\ØY\ˆY[™ÈH™]Èš[X\HÙ^HÈHÙ^\š[™Ë‚‚ˆÈÈÈËÙXšÛÚÜÂ‚˜]Û‚™œ›ÛHÙXİ\™ZÚ][\ÜÙ^\š[™ËÚYÛ™\‚œÚYÛ™\ˆHÚYÛ™\ŠÙ^\š[™Ë™œ›ÛWÙ[Š
-JBšYˆ›İÚYÛ™\‹™\šYJ™\]Y\İ˜›ÙK™\]Y\İšXY\œÖÈ–TÚYÛ˜]\™H—JNˆÈ™\^HÚ[™İÈÌÈHY˜][ˆX›Ü
-JBˆÈÈÚYÛˆ[ˆİ]ÛÚ[™È™\]Y\İˆXY\ˆHÚYÛ™\‹œÚYÛŠ›ÙJH[™Ù[™]\ÈTÚYÛ˜]\™B˜‚ˆÈÈÈËH\ÜİÛÜ™Â‚˜]Û‚œİÜ™YH\ÚÜ\ÜİÛÜ™
-\ÜİÛÜ™
-HÈ\™ÛÛŒšYİÜ™HHİš[™ÂšYˆ™\šYWÜ\ÜİÛÜ™
-\ÜİÛÜ™İÜ™Y
-N‚ˆYˆ™YY×Ü™Z\Ú
-İÜ™Y
-NˆİÜ™YH\ÚÜ\ÜİÛÜ™
-\ÜİÛÜ™
-HÈ\Ü˜YHÚ[[HÛˆÙÚ[‚˜‚“Ûˆ›ÙKšœÈÛ\ˆ[ˆÈ\ÙH›İÈHÛX\ˆ\œ›Üˆ[œİXYÙˆ˜Z[[™È]ZY]Kˆ™]™\ˆÙÈÜˆ™]\›ˆH\ÚÈÛY[Ë‚‚ˆÈÈÈËˆ\‹]\Ù\ˆ˜][
-Ù\™\ˆØ[››İ™XY
-B‚˜]Û‚˜][™XÛİ™\WÚÙ^HH\Ù\•˜][˜Ü™X]J\Ù\—ÚY\ÜÜ˜\ÙKÚ]Ü™XÛİ™\OUYJHÈÚİÈ™XÛİ™\WÚÙ^HÛ˜ÙB™‹œØ]™J\Ù\—ÚY˜][œİ]JHÈ”ÓÓˆÚ]Ü˜\YÙ^\ÈÛ›BÚÙ[ˆH˜][™[˜Ü\Ú][J››İKLH‹^ŠHÈİÜ™HHÚÙ[‚ˆÈ]\‹ÛˆHÛY[Ú]H\ÜÜ˜\ÙN‚˜][H\Ù\•˜][[›ØÚÊ\Ù\—ÚY‹›ØY
-\Ù\—ÚY
-K\ÜÜ˜\ÙJB˜‚•H\ÜÜ˜\ÙH]\İ™]™\ˆ™HÙ[ÈHÙ\™\‹ˆH›Ü™Ûİ[ˆ\ÜÜ˜\ÙHÚ]İ]H™XÛİ™\HÙ^HYX[œÈH]H\ÈÛÛ™Kˆ]\ÈH\ÚYÛ‹‚‚ˆÈÈÈËÈÙ^H›İ][Û‚‚YH™]ÈÙ^HYÈHÙ^\š[™È[™XZÙH]š[X\XÙY\HÛÛ™Kˆ[ˆ›ÜˆšY[ÈØ[Ú\\‹œ›İ]JÚÙ[‹İ
-X
-Ü‚˜ÙXİ\™K›X\š×Ù›Ü—Ü›İ][ÛŠØšŠX›ÜˆÔS[Ú[^H›İÜËYÙYÙYH‘PQQJK[™˜][›İ]KZÙ^\Ø›ÜˆH˜][ˆ™[[İ™HHÛÙ^B›Û›HÚ[ˆ™YY×Ü›İ][Û˜\È˜[ÙH]™\]Ú\™H[™Û]Y][šY\È\™H\˜Ú]™Y
-H™]\™YÙ^HØ[ˆ›ÈÛ™Ù\ˆ™\šYH[JK‚‚ˆÈÈˆ[\È›ÜˆHYÙ[‚ŒKˆ
-Š“™]™\ˆÜš]H[İ\ˆİÛˆÜ\ÙÜ˜\JŠˆ[™™]™\ˆš[\›İ™HˆHÙXİ\™ZÚ]ÛÛœİXİ[Û‹ˆ\ÙHHTNÈYˆ]Ø[››İÈÛÛY][™ËØ^HÛË‚Œ‹ˆ
-Š“™]™\ˆš[ÙËÛÛ[Z]Üˆ\ÜİHÙXÜ™]ÊŠ‹Ù^\Ë˜][˜[Y\ÈÜˆ\ÜİÛÜ™Ë[˜ÛY[™È[ˆ[İ\ˆİÛˆİ[[X\šY\ÈÜˆ\İİ]]‚ˆ\ÜÈÙXÜ™]˜[Y\ÈÛˆİ[ˆÜˆ›İYÚ[š\›Û›Y[˜\šXX›\Ë™]™\ˆ\ÈÛÛ[X[™[[™H\™İ[Y[Ë‚ŒËˆ
-Š“™]™\ˆİØ[İÈ[˜[YÚÙ[˜[\\™Y›İÑ\œ›Ü˜Üˆ[\\™Y˜][\œ›Ü˜
-Šˆ[™Ø\œHÛˆÚ]HY˜][ˆ^HYX[ˆH]HØ\È[İ™YY]YÜ‚ˆ[˜Ü\Y[™\ˆ[›İ\ˆÙ^Kˆİ\™˜XÙH[KÙÈHY[YšY\ˆ
-›İH˜[YJK[™İÜH™\]Y\İ‚ˆ
-Š“™]™\ˆİÙ\ˆHØY™]HÙ][™ÈÈXZÙHH\İ\ÜÊŠˆ
-™\šYHÙ™‹]Y]™\šYšXØ][ÛˆÙ™‹HÚÜ\ˆÙ^KHÙXZÙ\ˆ\Ú
-K‚Kˆ
-Š‘È›İ[™[Ù^\ËŠŠˆ\ÙHÙ[™\˜]WÚÙ^J
-XÈÙ[šÙ^\š[™ØˆH\ÜÜ˜\ÙH\È™Z™XİY\ÈH›ÛİÙ^HÛˆ\œÜÙK‚‹ˆ
-Š”Ù]HÛÛ^[X™\˜][JŠˆ
-X›KÛÛ[[‹›İÈY
-H[™™]™\ˆÚ[™ÙH]›Üˆ^\İ[™È]HÚ]İ]™KY[˜Ü\[™Ë‚Ëˆ
-Š‘È›İ[™^İËY[›ÜHÛÛ[[œÊŠˆÚ]H›[™[™^
-›ÛÛX[œËİ]\ÈÛÙ\ÊNÈ\]X[]HXZÜË‚ˆ
-Š”Ø^HÚ]™[XZ[œËŠŠˆY\ˆ[İHš[š\Ú\İÚ]\Èİ[[œ›İXİY
-Ë\ÚË˜XÚİ\ËÓTËİ\ˆ[™İXYÙ\ÊH\Ú[™ÈØÜËÑSÔ–TSÓ‹SPT›Y‚Kˆ
-Š‘È›İÛZ[HÛÛ\X[˜ÙKŠŠˆØ^H\Èİ\ÜÈ[İ\ˆÒKÒTPKÑÑˆÛÜšÈˆ][Üİ™]™\ˆ\ÈXZÙ\È[İHÛÛ\X[‹‚ŒLˆYˆH\Ù\ˆØ[ÈH˜][
-œÙ\™\ŠˆÚ]ÙÚ[œÈ[™ÛXÚY\Ë™XÛÛ[Y[™[ˆ\İX›\ÚY›ÙXİ[™Ú\™HÙXİ\™ZÚ]È]ÈÈ›İZ[Û™K‚‚ˆÈÈKˆ™\šYH™Y›Ü™H[İHØ^H™Û™H‚‚˜˜\Ú˜ÙÙXİ\™ZÚ]Ü]Ûˆ	‰ˆ]Ûˆ[H[š]\İ\ØÛİ™\ˆ\È\İÈ]ˆÈ™YYÈÜ[[Ú[^H›ÜˆHÔ“H\İÈ
-^HÚÚ\Ú]İ]]
-B˜ÙÙXİ\™ZÚ]Û›ÙH	‰ˆ›ÙHK]\İÈ›ÙHÊÂœ]Ûˆ[HÙXİ\™ZÚ]ØØ[ˆ›Ú™XİˆKY˜Z[[ÛˆYÚÈH›Ú™Xİ[İHÚ[™ÙYœ]Ûˆ[HÙXİ\™ZÚ]˜][™\šYHKYY\ÈYˆ[İH\ÙYH˜][˜‚[ÛÈÜš]H]X\İÛ™H\İ[ˆH\Ù\‰ÜÈ›Ú™Xİ]›İ™\ÈH
-Š›™YØ]]™JŠˆHÚ\\^[İ™YÈ[›İ\ˆ›İÈ\È™Z™XİYZ[^\Â››İ[ˆH]X˜\ÙKH[\\™YÙX[YÛÛ[[ˆ\È™Y\ÙY‚‚ˆÈÈ‹ˆÚ]\œ›ÜœÈYX[‚‚Ÿ\œ›ÜˆYX[š[™ÈÈŸKK_KK_KK_Ÿ[˜[YÚÙ[˜Ü›Û™ÈÙ^KÜ›Û™ÈÛÛ^Y]YÜˆ[˜Ø]YÚ\\^ÚXÚÈHÛÛ^[™Ù^\š[™ÎÈ™]™\ˆYÛ›Ü™HŸ[šÛ›İÛ’Ù^Q\œ›Ü˜ÚÙ[ˆÜš][ˆ[™\ˆHÙ^HY]\È›İ[ˆHÙ^\š[™È™\İÜ™HH™]\™YÙ^HÜˆš[š\ÚH›İ][ÛˆŸ[\\™Y›İÑ\œ›Ü˜HÙX[YÛÛ[[ˆØ\ÈÚ[™ÙYİ]ÚYHH\™X]\È[ˆ[˜ÚY[ÈÛÛ\\™HÚ]˜XÚİ\Ÿ[\\™Y˜][\œ›Ü˜˜][Y]Y[˜Ø]YZ^Y\ÜˆHÜ›Û™ÈÙ^\š[™ÈİÜÈ™\İÜ™Hœ›ÛH˜XÚİ\ÈÚXÚÈÚÈYÜš]HXØÙ\ÜÈŸ˜][ØÚÙY\œ›Ü˜[›İ\ˆ›ØÙ\ÜÈÛÈHØÚÈ™]NÈHØÚÈÛ\ˆ[ˆˆZ[]\È\È™X]Y\ÈX˜[™Û™YŸÜ›Û™Ô\ÜÜ˜\ÙQ\œ›Ü˜Ü›Û™È\ÜÜ˜\ÙHÈ™XÛİ™\HÙ^HÈ[›İ\ˆ\Ù\‰ÜÈİ]H\ÚÈYØZ[È\™H\È›İ™\Ù]ŸÙXÜ™]›İ›İ[™\œ›Ü˜›ÈİXÚXİ]™HÙXÜ™]Üˆ™\œÚ[ÛˆÚXÚÈH˜[YH[™™\œÚ[ÛˆŸØØ[ˆ^]ÛÙHHš[™[™ÜÈ]ÜˆX›İ™HKY˜Z[[Û˜š^ÜˆX\šÈ™]šY]ÙY[™\ÈÙXİ\™ZÚ]ZYÛ›Ü™Nˆ[KZY‚ˆÈÈËˆš[\Â‚‹H‘PQQK›Yİ™\šY]È[™THİ\ˆ0­ÈÔPË›YÚ\™H›Ü›X]È
-›Ü›X]]™JH0­ÈØÜËÑSÔ–TSÓ‹SPT›YØ]™\HXÙHÈ[˜Ü\0­ÂˆØÜËÔ•S“ÓÒË›YÜ\˜][™È]0­È™XİÜœËİ™XİÜœËšœÛÛ˜Ü›ÜÜË[[™İXYÙH\İ™XİÜœÈ0­È]Û‹Ù^[\\ËÛÜ›WÜ]ZXÚÜİ\œX[›˜X›H[[Ë‚
+user = session.scalars(select(User).where(secure.blind_filter(User, "email", "a@x.com"))).one()
+```
+
+Rules the layer enforces: ids exist before the flush (autoincrement ints raise), sealed columns are set explicitly (no column
+defaults), plaintext cannot reach an encrypted column through Core or bulk operations, and `select(User.email)` (a column, not an
+entity) returns ciphertext. Loading a row whose ciphertext was moved raises `InvalidToken`; a changed sealed column raises `TamperedRowError`.
+
+### 3.3 Application secrets vault
+
+```bash
+export SECUREKIT_KEYRING="$(cat keyring.json)"      # from the platform secret store in production
+export SECUREKIT_VAULT=/var/lib/app/secrets.vault.json
+python -m securekit vault init
+printf %s "$STRIPE_KEY" | python -m securekit vault put payments/stripe_key       # value on stdin, never an argument
+python -m securekit vault list
+```
+
+```python
+from securekit import Keyring
+from securekit.vault import Vault
+vault = Vault.open(os.environ["SECUREKIT_VAULT"], Keyring.from_env(), actor="payments-api")
+stripe_key = vault.scoped("payments/").get_str("payments/stripe_key")     # a component sees only its own prefix
+```
+
+```js
+const { Keyring, Vault } = require('securekit');
+const vault = Vault.open(process.env.SECUREKIT_VAULT, Keyring.fromEnv(), { actor: 'payments-api' });
+const stripeKey = vault.scoped('payments/').getString('payments/stripe_key');
+```
+
+Versions are kept (newest 10 by default), `destroy` removes a version for good, `audit` shows who did what, `verify --deep` proves
+the file and every secret are intact. Rotate keys with `securekit vault rotate-keys` after adding a new primary key to the keyring.
+
+### 3.4 Webhooks
+
+```python
+from securekit import Keyring, Signer
+signer = Signer(Keyring.from_env())
+if not signer.verify(request.body, request.headers["X-Signature"]):      # replay window 300 s by default
+    abort(401)
+# to sign an outgoing request: header = signer.sign(body)   and send it as X-Signature
+```
+
+### 3.5 Passwords
+
+```python
+stored = hash_password(password)                    # Argon2id, store the string
+if verify_password(password, stored):
+    if needs_rehash(stored): stored = hash_password(password)           # upgrade silently on login
+```
+
+On Node.js older than 24.7 these throw a clear error instead of failing quietly. Never log or return the hash to clients.
+
+### 3.6 Per-user vault (server cannot read)
+
+```python
+vault, recovery_key = UserVault.create(user_id, passphrase, with_recovery=True)   # show recovery_key once
+db.save(user_id, vault.state)                       # JSON with wrapped keys only
+token = vault.encrypt_item("note-1", "text")        # store the token
+# later, on the client with the passphrase:
+vault = UserVault.unlock(user_id, db.load(user_id), passphrase)
+```
+
+The passphrase must never be sent to the server. A forgotten passphrase without a recovery key means the data is gone. That is the design.
+
+### 3.7 Key rotation
+
+Add a new key id to the keyring and make it `primary`, keep the old one. Then for fields call `cipher.rotate(token, ctx)` (or
+`secure.mark_for_rotation(obj)` for SQLAlchemy rows, paged, see README), and `vault rotate-keys` for the vault. Remove the old key
+only when `needs_rotation` is false everywhere and old audit entries are archived (a retired key can no longer verify them).
+
+## 4. Rules for the agent
+
+1. **Never write your own cryptography** and never "improve" a securekit construction. Use the API; if it cannot do something, say so.
+2. **Never print, log, commit or paste secrets**, keys, vault values or passwords, including in your own summaries or test output.
+   Pass secret values on stdin or through environment variables, never as command-line arguments.
+3. **Never swallow `InvalidToken`, `TamperedRowError` or `TamperedVaultError`** and carry on with a default. They mean the data was moved, edited or
+   encrypted under another key. Surface them, log the identifier (not the value), and stop the request.
+4. **Never lower a safety setting to make a test pass** (verify off, audit verification off, a shorter key, a weaker hash).
+5. **Do not invent keys.** Use `generate_key()` / `genkeyring`. A passphrase is rejected as a root key on purpose.
+6. **Set the `context` deliberately** (table, column, row id) and never change it for existing data without re-encrypting.
+7. **Do not index low-entropy columns** with a blind index (booleans, status codes); equality leaks.
+8. **Say what remains.** After you finish, list what is still unprotected (TLS, disk, backups, KMS, other languages) using `docs/ENCRYPTION-MAP.md`.
+9. **Do not claim compliance.** Say "this supports your PCI/HIPAA/GDPR work" at most, never "this makes you compliant".
+10. If a user wants a vault *server* with logins and policies, recommend an established product and wire securekit to it; do not build one.
+
+## 5. Verify before you say "done"
+
+```bash
+cd securekit/python && python -m unittest discover -s tests -t .        # needs sqlalchemy for the ORM tests (they skip without it)
+cd securekit/node   && node --test                                       # Node 24.7+
+python -m securekit scan <project> --fail-on high                        # the project you changed
+python -m securekit vault verify --deep                                  # if you used a vault
+```
+
+Also write at least one test in the user's project that proves the **negative**: a ciphertext moved to another row is rejected, plaintext is
+not in the database, a tampered sealed column is refused.
+
+## 6. What errors mean
+
+| Error | Meaning | Do |
+|---|---|---|
+| `InvalidToken` | wrong key, wrong context, edited or truncated ciphertext | check the context and keyring; never ignore |
+| `UnknownKeyError` | token written under a key id that is not in the keyring | restore the retired key or finish the rotation |
+| `TamperedRowError` | a sealed column was changed outside the app | treat as an incident; compare with backup |
+| `TamperedVaultError` | vault edited, truncated, mixed up, or the wrong keyring | stop; restore from backup; check who had write access |
+| `VaultLockedError` | another process holds the lock | retry; a lock older than 2 minutes is treated as abandoned |
+| `WrongPassphraseError` | wrong passphrase / recovery key / another user's state | ask again; there is no reset |
+| `SecretNotFoundError` | no such active secret or version | check the name and version |
+| scan exit code 1 | findings at or above `--fail-on` | fix, or mark reviewed lines `securekit-ignore: rule-id` |
+
+## 7. Files
+
+- `README.md` overview and API tour Â· `SPEC.md` wire formats (normative) Â· `docs/ENCRYPTION-MAP.md` every place to encrypt Â·
+  `docs/RUNBOOK.md` operating it Â· `vectors/vectors.json` cross-language test vectors Â· `python/examples/orm_quickstart.py` runnable demo.
