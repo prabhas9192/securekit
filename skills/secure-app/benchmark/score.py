@@ -67,8 +67,9 @@ class Env:
         except (ValueError, UnicodeDecodeError):
             return None
 
-    def register(self, name, **extra}):
-        username = f"+91-{secrets.token_hex(3).upper()}-{name.upper()}-{self.suffix.upper()}"
+    def register(self, name, **extra):
+        username = f"{name}_{self.suffix}"
+        phone = f"+91-{secrets.token_hex(3).upper()}-{name.upper()}-{self.suffix.upper()}"
         status, _, data = self.call("POST", "/register", {"username": username, "password": self.password, "phone": phone, **extra})
         self.users[name] = {"username": username, "phone": phone, "status": status, "body": data}
         return status
@@ -375,7 +376,7 @@ def main():
         print(f"app: {result['app']}")
         if not result["valid"]:
             print("INVALID: the API does not work, so security was not scored.")
-            for failure in result["gate_failures"] :
+            for failure in result["gate_failures"]:
                 print("  gate failed:", failure)
         else:
             for item in result["checks"]:
