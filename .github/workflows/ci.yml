@@ -1,0 +1,66 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  python-tests:
+    name: Python ${{ matrix.python-version }} (Unit + ORM + Scan)
+    runs-on: ubuntu-latest
+    strategy:
+      matrix:
+        python-version: ["3.11", "3.12"]
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: ${{ matrix.python-version }}
+      - name: Install securekit with SQLAlchemy extra
+        run: python -m pip install --upgrade pip && pip install -e "./python[sqlalchemy]"
+      - name: Run Python test suite
+        working-directory: python
+        run: python -m unittest discover -s tests -t . -v
+      - name: Run ORM quickstart example
+        run: python python/examples/orm_quickstart.py
+      - name: Self-scan repository with securekit scan
+        run: python -m securekit scan . --fail-on high
+
+  node-tests:
+    name: Node.js 24 (Zero-Dep + Argon2id)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - name: Check Node version
+        run: node --version
+      - name: Run Node test suite
+        working-directory: node
+        run: npm test
+
+  cross-language-vectors:
+    name: Cross-Language Vector Round-Trip (Node 24 -> Python)
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "24"
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install Python securekit
+        run: pip install -e ./python
+      - name: Emit fresh vectors from Node 24
+        working-directory: node
+        run: npm run emit-vectors
+      - name: Verify Python reads Node-written tokens, hashes & vaults
+        working-directory: python
+        run: python -m unittest tests.test_vectors -v
