@@ -129,52 +129,70 @@ import os, secrets, tempfile
 
 def safe_join(base, user_path):
     base = os.path.realpath(base)
-    target = os.path.realpath(os.path.join(_­ç‹\Ù\—Ü]
-JBˆYˆÜËœ]˜ÛÛ[[Ûœ]
-Ø˜\ÙK\™Ù]JHOH˜\ÙN‚ˆ˜Z\ÙH˜[YQ\œ›ÜŠœ]\ØØ\\ÈH˜\ÙH\™XİÜHŠBˆ™]\›ˆ\™Ù]‚™Yˆ™]×ÜİÜ™YÛ˜[YJÜšYÚ[˜[
-N‚ˆ^[œÚ[ÛˆHÜËœ]œÜ]^
-ÜšYÚ[˜[
-VÌWK›İÙ\Š
-BˆYˆ^[œÚ[Ûˆ›İ[ˆÈ‹œ™È‹‹šœÈ‹‹œˆŸN‚ˆ˜Z\ÙH˜[YQ\œ›ÜŠ™š[H\H›İ[İÙYŠBˆ™]\›ˆÙXÜ™]ËÚÙ[—Ú^
-MŠH
-È^[œÚ[ÛˆÈH\Ù\‰ÜÈ˜[YH\È™]™\ˆ\ÙYÛˆ\ÚÂ‚Ú][\š[K•[\Ü˜\Q\™XİÜJ
-H\È˜\ÙN‚ˆ\ÜÙ\ØY™WÚ›Ú[Š˜\ÙKœ™\ÜËÌŒ‹œˆŠKœİ\İÚ]
-ÜËœ]œ™X[]
-˜\ÙJJBˆ›Üˆ]š[[ˆ
-‹‹‹ÜÙXÜ™]‹‹Ù]ËÜ\ÜİÙ‹˜KË‹‹Ë‹‹ØˆŠN‚ˆN‚ˆØY™WÚ›Ú[Š˜\ÙK]š[
-Bˆ˜Z\ÙH\ÜÙ\[Û‘\œ›ÜŠ]š[
-Bˆ^Ù\˜[YQ\œ›Ü‚ˆ\ÜÂ˜\ÜÙ\™]×ÜİÜ™YÛ˜[YJ“^H[›ÚXÙK”ˆŠK™[™İÚ]
-‹œˆŠH[™[Š™]×ÜİÜ™YÛ˜[YJœ™ÈŠJHOHÍ‚˜‚ˆÈÈÙ\™\‹\ÚYH™\]Y\İ›Ü™Ù\KÔÔ‘ˆ
-ØØ[ˆÜÜ™ŠB‚•Ú[ˆHÙ\™\ˆ™]Ú\ÈHT“H\Ù\ˆÚÜÙH
-ÙXšÛÚÜË[šÈ™]šY]ÜËš[\Üœ›ÛHT“‹‹Ú[XYÙH™]Ú\œÊNˆ[İË[\İØÚ[Y\È
-Ø
-H[™ÜİÈÚ\™HÜÜÚX›NÈ
-Šœ™\ÛÛ™HH˜[YH[™™Y\ÙHš]˜]KÛÜ˜XÚË›[šË[ØØ[[™Y]Y]HY™\ÜÙ\ÊŠˆ
-LÎMÌ‹ŒM‹ÌL˜NL‹ŒMÌM˜LËÎMKŒMÌM˜[˜ÛY[™ÈMKŒMŒMKŒMŒX˜Ì‹ÍØ
-NÈÛÛ›™XİÈHY™\ÜÈ[İHÚXÚÙY
-Y™X]”È™Xš[™[™ÊNÂ™È›İ›ÛİÈ™Y\™XİÈ›[™NÈÙ][Y[İ]È[™Ú^™H[Z]ÎÈÛ‰İ™]\›ˆ˜]È™\ÜÛœÙ\ÈÈH\Ù\‹‚‚˜]Û‚ˆÈ[›˜X›Bš[\Ü\Y™\ÜÂ‚™Yˆ\×ÜX›X×ØY™\ÜÊ^
-N‚ˆY™\ÜÈH\Y™\ÜËš\ØY™\ÜÊ^
-Bˆ™]\›ˆ›İ
-Y™\ÜËš\×Üš]˜]HÜˆY™\ÜËš\×ÛÛÜ˜XÚÈÜˆY™\ÜËš\×Û[š×ÛØØ[ÜˆY™\ÜËš\×Ü™\Ù\™YÜˆY™\ÜËš\×Û][XØ\İÜˆY™\ÜËš\×İ[œÜXÚYšYY
-B‚˜\ÜÙ\\×ÜX›X×ØY™\ÜÊLËŒNŒŒM‹ŒÍŠB™›Üˆ›ØÚÙY[ˆ
-ŒLËŒŒŒH‹ŒLŒKŒ‹ŒÈ‹ŒNL‹ŒMŒH‹ŒMÌ‹ŒM‹KH‹ŒMKŒMŒMKŒM‹ŒH‹ŒŒŒŒ‹™™ŒHŠN‚ˆ\ÜÙ\›İ\×ÜX›X×ØY™\ÜÊ›ØÚÙY
-K›ØÚÙY˜‚ˆÈÈ™Y\™XİË\Ù\šX[^˜][Û‹S
-ØØ[ˆÜ[‹\™Y\™Xİ[œØY™KY\Ù\šX[^˜][ÛŠB‚‹H
-Š“Ü[ˆ™Y\™XİŠŠˆ™Y\™XİÛ›HÈ™[]]™H]È[İHZ[ÜˆÈ[ˆ[İË[\İÈ™]™\ˆÈH˜]È™^XT“ˆÚXÚÈ\›œİ\İÚ]
-‹ÈŠH[™›İ\›œİ\İÚ]
-‹ËÈŠX]Z[š[][K‚‹H
-Š‘\Ù\šX[^˜][ÛŠŠˆXÚÛXX\œÚ[X[[›ØY˜]˜HØš™Xİ[œ]İ™X[X[œÙ\šX[^™X›ÙK\Ù\šX[^™X^Xİ]H]XÚÙ\ˆÛÙKˆ\ÙH”ÓÓˆ[™˜[Y]H]‚‹H
-Š–SŠŠˆ\ØX›H^\›˜[[]Y\È[™È
-Y\ÙY[[ˆ]ÛŠNÈ™Y™\ˆ”ÓÓ‹‚‹H
-Š”™Yİ[\ˆ^™\ÜÚ[ÛœÎŠŠˆ]›ÚY™\İY]X[YšY\œÈÛˆ\Ù\ˆ[œ]
-™QÔÊNÈ][™İ[Z]È™Y›Ü™HX]Ú[™Ë‚‚ˆÈÈ\™[š[™ÈÚXÚÛ\İ
-]™\H™\ÜÛœÙJB‚ŸXY\ˆÈÙ][™È˜[YHŸKK_KK_ŸPÛÛ[U\KSÜ[ÛœØ›ÜÛšY™˜ŸÛÛ[TÙXİ\š]KTÛXŞX
-S
-H]X\İY˜][\Ü˜È	ÜÙ[‰ÎÈœ˜[YKX[˜Ù\İÜœÈ	Û›Û™IØÈYÚ[ˆ\ˆYÙHŸØXÚKPÛÛ›Û
-š]˜]H]JH›Ë\İÜ™XŸİšXİU˜[œÜÜTÙXİ\š]XX^XYÙOLÌMLÍŒÈ[˜ÛYTİX‘ÛXZ[œØÛ˜ÙHË[Û›HŸ™Y™\œ™\‹TÛXŞX›Ë\™Y™\œ™\˜ÜˆİšXİ[ÜšYÚ[‹]Ú[‹XÜ›ÜÜË[ÜšYÚ[˜ŸQœ˜[YKSÜ[ÛœØÈœ˜[YKX[˜Ù\İÜœØS–X[›\ÜÈ[İH[X™YÛˆ\œÜÙHŸÓÔ”È\İ^XİÜšYÚ[œÎÈ™]™\ˆ
-˜ÙÙ]\ˆÚ]Ü™Y[X[È
-ØØ[ˆÛÜœË]Ú[Ø\™
-HŸÛÛÚÚY\ÈÙXİ\™NÈÛ›NÈØ[YTÚ]XŸY]ÙÈ™Y\ÙH[œİ\ÜYY]ÙÈÚ]XÈ›ÈPÑX‚ˆÈÈ™YØ]]™H\İÈÈÜš]B‚”ÔS^[ØYÈ
-	ÈÔˆOLHKX	ÊHÔˆOLHKXHS’SÓˆÑSPÕ
-H™]\›ˆ›È›Ü™ZYÛˆ›İÜÈ[™›ÈLÈØÜš\˜^ÛÛY\È˜XÚÈ\ØØ\YÈX[›Ü›YY”ÓÓˆ\ÈÈ[ˆİ™\œÚ^™Y›ÙH\È™Y\ÙYÈ‹‹Ø[™XœÛÛ]H]È\™H™Z™XİYÂ˜HT“Ú[[™È]LËŒŒŒXÜˆHY]Y]HY™\ÜÈ\È™Y\ÙYÈHİ]KXÚ[™Ú[™È™\]Y\İÚ]İ]HÔÔ‘ˆÚÙ[ˆ˜Z[ÎÈ[ˆ\ØYYš[ØœÚ][ˆ[XYÙH^[œÚ[Ûˆ\È›İÙ\™Y\ÈÛÙK‚•H™[˜ÚX\šÈØÛÜ™\ˆÚİÜÈİÈÈ]]ÛX]HÙ]™\˜[Ùˆ\ÙH‹‹Ø™[˜ÚX\šËÜØÛÜ™KœX
-K‚
+    target = os.path.realpath(os.path.join(base, user_path))
+    if os.path.commonpath([base, target]) != base:
+        raise ValueError("path escapes the base directory")
+    return target
+
+def new_stored_name(original):
+    extension = os.path.splitext(original)[1].lower()
+    if extension not in {".png", ".jpg", ".pdf"}:
+        raise ValueError("file type not allowed")
+    return secrets.token_hex(16) + extension          # the user's name is never used on disk
+
+with tempfile.TemporaryDirectory() as base:
+    assert safe_join(base, "reports/2026.pdf").startswith(os.path.realpath(base))
+    for evil in ("../secret", "/etc/passwd", "a/../../b"):
+        try:
+            safe_join(base, evil)
+            raise AssertionError(evil)
+        except ValueError:
+            pass
+assert new_stored_name("My Invoice.PDF").endswith(".pdf") and len(new_stored_name("x.png")) == 36
+```
+
+## Server-side request forgery, SSRF (scan: ssrf)
+
+When the server fetches a URL the user chose (webhooks, link previews, "import from URL", PDF/image fetchers): allow-list schemes (`https`) and hosts where possible; **resolve the name and refuse private, loopback,
+link-local and metadata addresses** (`10/8`, `172.16/12`, `192.168/16`, `127/8`, `169.254/16` including `169.254.169.254`, `::1`, `fc00::/7`); connect to the address you checked (defeat DNS rebinding);
+do not follow redirects blindly; set timeouts and size limits; don't return raw responses to the user.
+
+```python
+# runnable
+import ipaddress
+
+def is_public_address(text):
+    address = ipaddress.ip_address(text)
+    return not (address.is_private or address.is_loopback or address.is_link_local or address.is_reserved or address.is_multicast or address.is_unspecified)
+
+assert is_public_address("93.184.216.34")
+for blocked in ("127.0.0.1", "10.1.2.3", "192.168.0.5", "172.16.9.9", "169.254.169.254", "::1", "0.0.0.0", "fd00::1"):
+    assert not is_public_address(blocked), blocked
+```
+
+## Redirects, deserialization, XML (scan: open-redirect, unsafe-deserialization)
+
+- **Open redirect:** redirect only to relative paths you build or to an allow-list; never to a raw `next=` URL. Check `url.startswith("/") and not url.startswith("//")` at minimum.
+- **Deserialization:** `pickle`, `marshal`, `yaml.load`, Java `ObjectInputStream`, PHP `unserialize`, `node-serialize` execute attacker code. Use JSON and validate it.
+- **XML:** disable external entities and DTDs (`defusedxml` in Python); prefer JSON.
+- **Regular expressions:** avoid nested quantifiers on user input (ReDoS); put length limits before matching.
+
+## HTTP hardening checklist (every response)
+
+| Header / setting | Value |
+|---|---|
+| `X-Content-Type-Options` | `nosniff` |
+| `Content-Security-Policy` (HTML) | at least `default-src 'self'; frame-ancestors 'none'`; tighten per page |
+| `Cache-Control` (private data) | `no-store` |
+| `Strict-Transport-Security` | `max-age=31536000; includeSubDomains` once HTTPS-only |
+| `Referrer-Policy` | `no-referrer` or `strict-origin-when-cross-origin` |
+| `X-Frame-Options` / `frame-ancestors` | `DENY` unless you embed on purpose |
+| CORS | list exact origins; never `*` together with credentials (scan: cors-wildcard) |
+| Cookies | `Secure; HttpOnly; SameSite` |
+| Methods | refuse unsupported methods with `405`; no `TRACE` |
+
+## Negative tests to write
+
+SQL payloads (`' OR 1=1 --`, `') OR 1=1 --`, a `UNION SELECT`) return no foreign rows and no `500`; `<script>` text comes back escaped; malformed JSON is `400`; an oversized body is refused; `../` and absolute paths are rejected;
+a URL pointing at `127.0.0.1` or the metadata address is refused; a state-changing request without the CSRF token fails; an uploaded `.html`/`.php` with an image extension is not served as code.
+The benchmark scorer shows how to automate several of these (`../benchmark/score.py`).
