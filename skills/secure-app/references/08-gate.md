@@ -1,13 +1,22 @@
 # 08 The gate: what "done" means, and how to report it
 
 Run this before telling the user the work is finished. Every row needs **evidence** (a file and line, a test name, a command and its output). "I believe so" is not evidence.
-Mark each row **PASS**, **FAIL**, **N/A ** (with the reason) or **ACCEPTED** (a named person accepts the risk, with a date).
+Mark each row **PASS**, **FAIL**, **N/A** (with the reason) or **ACCEPTED** (a named person accepts the risk, with a date).
 
 ## Blocking rows (any FAIL here means do not ship)
 
 | ID | Control | Evidence to show |
 |---|---|---|
-| G4 | Passwords stored with Argon2id; policy enforced | code line + test that the database holds `$argon2id and not the password |
+| G4 | Passwords stored with Argon2id; policy enforced | code line + test that the database holds `$argon2id# 08 The gate: what "done" means, and how to report it
+
+Run this before telling the user the work is finished. Every row needs **evidence** (a file and line, a test name, a command and its output). "I believe so" is not evidence.
+Mark each row **PASS**, **FAIL**, **N/A** (with the reason) or **ACCEPTED** (a named person accepts the risk, with a date).
+
+## Blocking rows (any FAIL here means do not ship)
+
+| ID | Control | Evidence to show |
+|---|---|---|
+| G4 | Passwords stored with Argon2id; policy enforced | code line + test that the database  and not the password |
 | G5 | Login: generic errors, rate limit | test: identical responses; 429 after N failures |
 | G6 | Sessions: random, hashed at rest, expiring, real logout | test: two logins differ; token not in database; token dead after logout |
 | G9 | Deny by default; one central authorization path | where the policy lives; list of public routes |
