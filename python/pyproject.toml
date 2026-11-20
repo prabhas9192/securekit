@@ -5,10 +5,11 @@ build-backend = "setuptools.build_meta"
 [project]
 name = "securekit"
 version = "0.1.0"
-description = "Thin, opinionated field encryption, blind indexes, record seals, request signing and Argon2id passwords."
+description = "Application-level encryption, blind indexes, tamper-evident row seals, request signing, Argon2id passwords, encrypted secrets vaults, SQLAlchemy ORM integration, and static security scanner."
 requires-python = ">=3.10"
 license = { text = "MIT" }
 authors = [{ name = "prabhas9192" }]
+keywords = ["security", "cryptography", "encryption", "aes-gcm", "argon2id", "vault", "sqlalchemy", "scanner"]
 dependencies = [
     "cryptography>=42",
     "argon2-cffi>=23.1",
@@ -16,6 +17,14 @@ dependencies = [
 
 [project.optional-dependencies]
 sqlalchemy = ["sqlalchemy>=2.0,<2.1"]  # tested on 2.0.55
+
+[project.scripts]
+securekit = "securekit.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/prabhas9192/securekit"
+Repository = "https://github.com/prabhas9192/securekit"
+Issues = "https://github.com/prabhas9192/securekit/issues"
 
 [tool.setuptools]
 packages = ["securekit"]
