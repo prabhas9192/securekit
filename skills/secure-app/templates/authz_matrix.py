@@ -58,7 +58,7 @@ def run(base, config):
         status, data = call(base, step["method"], resolve(step["path"]), tokens.get(step["as"]) if step.get("as") else None, step.get("json"))
         ok = status in step.get("expect", [200, 201])
         if ok and step.get("save"):
-            parsed = json.loads(result = data)
+            parsed = json.loads(data)
             for key, field in step["save"].items():
                 saved[key] = parsed[field]
         results.append({"name": "setup: " + step.get("name", step["path"]), "passed": ok, "detail": f"status {status}"})
