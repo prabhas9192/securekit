@@ -120,7 +120,7 @@ except ValueError:
 
 - Separate admin identities from normal accounts; no shared "admin" login. Require MFA for admin roles.
 - Impersonation ("log in as the customer") is time-limited, visibly marked, blocked for the most sensitive actions, and fully audited with who/why/when.
-- Admin APIs, are not a different, weaker door: same authentication, same logging, ideally a separate network path.
+- Admin APIs are not a different, weaker door: same authentication, same logging, ideally a separate network path.
 
 ## Test it as a matrix (the way these bugs are found)
 
